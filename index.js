@@ -8,12 +8,12 @@ app.use(express.json()); // load in to application
 app.use(cors());
 
 // middleware file export
-const middleware = require("./middleware");
-app.use("/midd", middleware);
+// const middleware = require("./middleware");
+// app.use("/midd", middleware);
 
 //approute file export
-const approute = require("./approute");
-app.use("/apps", approute);
+// const approute = require("./approute");
+// app.use("/apps", approute);
 
 //array file export
 const array = require("./array");
