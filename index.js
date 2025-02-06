@@ -19,6 +19,17 @@ app.use("/apps", approute);
 const array = require("./array");
 app.use("/array", array);
 
+//string file export
+const string =require("./string");
+app.use("/string",string);
+
+
+//crudapidb file export
+const cruddb =require("./crud-api-db")
+app.use("/users",cruddb)
+
+
+
 // req = request , res = response
 app.get("/get-all-contact-details", (req, res) => {
   res.json([1, 2, 3]);
