@@ -1,0 +1,51 @@
+[
+    {
+      "productName": "Hydrating Face Cream",
+      "brandName": "GlowSkin",
+      "price": 599,
+      "category": "Skincare",
+      "description": "A lightweight cream that provides intense hydration for all skin types.",
+      "stock": 50
+    },
+    {
+      "productName": "Matte Lipstick",
+      "brandName": "BeautyCo",
+      "price": 499,
+      "category": "Makeup",
+      "description": "Long-lasting matte lipstick in a variety of shades.",
+      "stock": 100
+    },
+    {
+      "productName": "Volumizing Mascara",
+      "brandName": "LashPro",
+      "price": 799,
+      "category": "Makeup",
+      "description": "Mascara that provides volume and length without clumping.",
+      "stock": 200
+    },
+    {
+      "productName": "Hair Repair Serum",
+      "brandName": "HairRevive",
+      "price": 999,
+      "category": "Haircare",
+      "description": "A serum that repairs damaged hair and prevents split ends.",
+      "stock": 75
+    },
+    {
+      "productName": "Charcoal Face Mask",
+      "brandName": "PureGlow",
+      "price": 349,
+      "category": "Skincare",
+      "description": "A deep cleansing mask that removes impurities and excess oil.",
+      "stock": 120
+    },
+    {
+      "productName": "Sunscreen SPF 50",
+      "brandName": "SunSafe",
+      "price": 699,
+      "category": "Skincare",
+      "description": "Broad-spectrum sunscreen that protects against UVA and UVB rays.",
+      "stock": 90
+    }
+  ]
+  

@@ -3,6 +3,10 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
+
+
+
+
 //built middleware  express.json()
 app.use(express.json()); // load in to application
 app.use(cors());
@@ -27,6 +31,19 @@ app.use("/string",string);
 //crudapidb file export
 const cruddb =require("./crud-api-db")
 app.use("/users",cruddb)
+
+//contact-crud file export
+const contactcrud = require("./contact-crud")
+app.use("/contacts",contactcrud)
+
+//crud-beauty 
+const beauty_product = require("./crud-beauty");
+app.use("/beauty" ,beauty_product );
+
+
+
+
+
 
 
 

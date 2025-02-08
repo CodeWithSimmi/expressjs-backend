@@ -9,4 +9,12 @@ async function usersdb() {
   const databaseconnect = connect.db("simran-database");
   return databaseconnect.collection("user-collection");
 }
-module.exports = { usersdb };
+
+async function beautyproductdb() {
+  const connect = await client.connect();
+
+  const databaseconnect = connect.db("simran-database");
+  return databaseconnect.collection("beautyproduct-collection");
+}
+
+module.exports = { usersdb ,beautyproductdb};

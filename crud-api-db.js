@@ -64,9 +64,10 @@ router.put("/upd",async(req,res)=>{
 
 router.delete("/dlt/:id",async(req,res)=>{
     const connectdb = await usersdb();
-    const deletedata = await connectdb.findOneAndDelete(new ObjectId(req.params.id));
-        
-        res.json(deletedata);
+    const deletedata = await connectdb.findOneAndDelete({_id:new ObjectId(req.params.id)});
+    res.json({...deletedata});    
+
+        // res.json(deletedata);
        
 })
 
