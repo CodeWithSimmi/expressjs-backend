@@ -13,9 +13,9 @@ router.get('/fetch', async (req, res) => {
   try {
     const connectdb =await beautyproductdb();
 
-    const products = connectdb.find();
+    const products = await connectdb.find().toArray();
     console.log(products);
-    res.json(products); 
+    res.json(products?.[0]); 
   } catch (error) {
     console.log(error)
     res.status(500).json({...error});
@@ -25,15 +25,15 @@ router.get('/fetch', async (req, res) => {
 
 
 // Add a new beauty product
-router.post('/add', async (req, res) => {
-  try {
-    const newProduct = new BeautyProduct(res.body);
-    const savedProduct = await newProduct.save();
-    res.status(201).json(savedProduct);
-  } catch (error) {
-    res.status(400).json({ error: 'Failed to add product' });
-  }
-});
+// router.post('/add', async (req, res) => {
+//   try {
+//     const newProduct = new BeautyProduct(res.body);
+//     const savedProduct = await newProduct.save();
+//     res.status(201).json(savedProduct);
+//   } catch (error) {
+//     res.status(400).json({ error: 'Failed to add product' });
+//   }
+// });
 
 
 module.exports = router;

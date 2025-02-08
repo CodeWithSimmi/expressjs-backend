@@ -12,12 +12,12 @@ app.use(express.json()); // load in to application
 app.use(cors());
 
 // middleware file export
-const middleware = require("./middleware");
-app.use("/midd", middleware);
+// const middleware = require("./middleware");
+// app.use("/midd", middleware);
 
 //approute file export
-const approute = require("./approute");
-app.use("/apps", approute);
+// const approute = require("./approute");
+// app.use("/apps", approute);
 
 //array file export
 const array = require("./array");
@@ -66,5 +66,5 @@ app.post("/post-contact-details", (req, res) => {
 // listen have two argument (port number and show the message when your app start
 
 app.listen(4000, () => {
-  console.log("listing on port 4000");
+  console.log("listening on port 4000");
 });
