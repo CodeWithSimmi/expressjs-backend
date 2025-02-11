@@ -40,7 +40,9 @@ app.use("/contacts",contactcrud)
 const beauty_product = require("./crud-beauty");
 app.use("/beauty" ,beauty_product );
 
-
+//crud-crypto-signup 
+const crypto_signup = require("./crud-signup-crypto");
+app.use("/cryptosignup",crypto_signup);
 
 
 

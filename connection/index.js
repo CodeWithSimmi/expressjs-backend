@@ -17,4 +17,11 @@ async function beautyproductdb() {
   return databaseconnect.collection("beautyproduct-collection");
 }
 
-module.exports = { usersdb ,beautyproductdb};
+async function cryptoappdb() {
+  const connect = await client.connect();
+
+  const databaseconnect = connect.db("simran-database");
+  return databaseconnect.collection("crypto-app");
+}
+
+module.exports = { usersdb, beautyproductdb, cryptoappdb };
