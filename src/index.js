@@ -20,11 +20,11 @@ app.use(cors());
 // app.use("/apps", approute);
 
 //array file export
-const array = require("./array");
+const array = require("../array");
 app.use("/array", array);
 
 //string file export
-const string =require("./string");
+const string =require("../string");
 app.use("/string",string);
 
 
@@ -33,7 +33,7 @@ const cruddb =require("./crud-api-db")
 app.use("/users",cruddb)
 
 //contact-crud file export
-const contactcrud = require("./contact-crud")
+const contactcrud = require("../contact-crud")
 app.use("/contacts",contactcrud)
 
 //crud-beauty 
@@ -41,7 +41,7 @@ const beauty_product = require("./crud-beauty");
 app.use("/beauty" ,beauty_product );
 
 //crud-crypto-signup 
-const crypto_signup = require("./crud-signup-crypto");
+const crypto_signup = require("./auth/signup/crud-signup-crypto");
 app.use("/cryptosignup",crypto_signup);
 
 

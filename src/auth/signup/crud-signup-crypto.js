@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { cryptoappdb } = require("./connection");
+const { cryptoappdb } = require("../../connection");
 
 router.get("/fetch", async (req, res) => {
   try {
@@ -14,8 +14,12 @@ router.get("/fetch", async (req, res) => {
   }
 });
 
-router.post("/add", (req, res) => {
+router.post("/add", async (req, res) => {
   try {
+
+    const connectdb = await cryptoappdb();
+    const insertdata = await connectdb.insertOne(req.body);
+
     const { username, email, password } = req.body;
 
     if (!username || !email || !password) {
@@ -32,25 +36,13 @@ router.post("/add", (req, res) => {
 });
 
 
-
-// router.put("/update", async (req, res) => {
-//   const connect = await cryptoappdb();
-//   const updatevalues = await connect.updateOne(
-//     { username: "frontendmegha" },
-//     { $set: { password: 2356 } }
-//   );
-//   console.log(updatevalues);
-//   res.json(updatevalues);
-// });
-
 router.put("/update", async (req, res) => {
   try {
+    
     const { username, password } = req.body;
 
     if (!username || !password) {
-      return res
-        .status(400)
-        .json({ error: "Username and Password are required" });
+      return res.status(400).json({ error: "Username and Password are required" });
     }
 
     const connect = await cryptoappdb();
