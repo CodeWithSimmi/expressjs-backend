@@ -29,8 +29,8 @@ app.use("/string",string);
 
 
 //crudapidb file export
-const cruddb =require("./crud-api-db")
-app.use("/users",cruddb)
+// const cruddb =require("./crud-api-db")
+// app.use("/users",cruddb)
 
 //contact-crud file export
 const contactcrud = require("../contact-crud")
