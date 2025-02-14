@@ -33,7 +33,8 @@ router.put("/update/:id", async (req, res) => {
     const putid =new ObjectId(id);
     
     const updatedata = await connectdb.findOneAndUpdate( 
-      putid,updateschema,{new:true}
+      {_id:putid},
+      {$set:body}
     );
 
     if (updatedata.matchedCount === 0) {
@@ -50,9 +51,10 @@ router.put("/update/:id", async (req, res) => {
   }
 });
 
-router.delete("/delete", async (req, res) => {
+router.delete("/delete/:id", async (req, res) => {
   try {
     const { email } = req.body;
+    const id  = req.params.id;
 
     if (!email) {
       return res.status(400).json({ error: "email is required" });
@@ -60,7 +62,7 @@ router.delete("/delete", async (req, res) => {
 
     const connect = await cryptoappdb2();
 
-    const deleteResult = await connect.deleteOne({ email: email });
+    const deleteResult = await connect.findOneAndDelete({ _id: new ObjectId(id)});
 
     res
       .status(200)
