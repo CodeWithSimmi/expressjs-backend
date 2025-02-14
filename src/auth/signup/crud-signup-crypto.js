@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { cryptoappdb } = require("../../connection");
 
+
 router.get("/fetch", async (req, res) => {
   try {
     const connect = await cryptoappdb();

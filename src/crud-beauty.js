@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const BeautyProduct = require("../models/products");
+const BeautyProduct = require("./models/products");
 const ProductJson = require("../products.json");
 const { beautyproductdb } = require("./connection");
 

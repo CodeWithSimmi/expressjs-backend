@@ -44,7 +44,9 @@ app.use("/beauty" ,beauty_product );
 const crypto_signup = require("./auth/signup/crud-signup-crypto");
 app.use("/cryptosignup",crypto_signup);
 
-
+//crud-crypto-signin
+const crypto_signin = require("./auth/signin/crud-signin-crypto");
+app.use("/cryptosignin",crypto_signin);
 
 
 

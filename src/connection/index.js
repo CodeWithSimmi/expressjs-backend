@@ -24,4 +24,11 @@ async function cryptoappdb() {
   return databaseconnect.collection("crypto-app");
 }
 
-module.exports = { usersdb, beautyproductdb, cryptoappdb };
+async function cryptoappdb2() {
+  const connect = await client.connect();
+
+  const databaseconnect = connect.db("simran-database");
+  return databaseconnect.collection("crypto-app-signin");
+}
+
+module.exports = { usersdb, beautyproductdb, cryptoappdb,cryptoappdb2};
