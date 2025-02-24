@@ -48,7 +48,8 @@ app.use("/cryptosignup",crypto_signup);
 const crypto_signin = require("./auth/signin/crud-signin-crypto");
 app.use("/cryptosignin",crypto_signin);
 
-
+const crypto = require("./crypto/crypto");
+app.use("/crypto",crypto);
 
 
 // req = request , res = response
